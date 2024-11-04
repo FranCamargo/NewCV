@@ -1,0 +1,159 @@
+/* Estilos da barra de navegação */
+.navbar {
+    display: flex;
+    /* Ativa o layout Flexbox. */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente. */
+    align-items: center;
+    /* Alinha os itens verticalmente. */
+    backdrop-filter: blur(30px);
+    /* Aplica desfoque ao fundo. */
+    box-shadow: 0px 0px 30px rgb(158, 152, 152);
+    /* Adiciona sombra ao redor. */
+    border: 2px solid rgba(29, 27, 27, 0.205);
+    /* Define borda branca semi-transparente. */
+    position: sticky;
+    /* Fixa o elemento ao rolar a página. */
+    top: 0;
+    /* Coloca o elemento no topo. */
+    border-radius: 30px;
+    /* Arredonda os cantos. */
+    height: 60px;
+    /* Define altura fixa. */
+    margin: 20px auto;
+    /* Margem vertical de 20px e centraliza horizontalmente. */
+    padding: 0 10px;
+    /* Espaço interno de 20px nas laterais. */
+    max-width: 800px;
+    /* Largura máxima de 800px. */
+}
+
+/* Estilos do menu */
+.menu {
+    display: flex;
+    /* Ativa o layout Flexbox. */
+    justify-content: space-between;
+    /* Distribui espaço entre os itens. */
+    align-items: center;
+    /* Alinha os itens verticalmente. */
+    list-style: none;
+    /* Remove marcadores da lista. */
+    gap: 70px;
+    /* Define espaço de 40px entre os itens do menu. */
+}
+
+/* Links do menu */
+.menu a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* Define a família de fontes do texto. */
+    font-size: 25px;
+    /* Define o tamanho da fonte como 25 pixels. */
+    color: rgb(143, 143, 143);
+    /* Define a cor do texto com 70% de opacidade (branco). */
+    text-decoration: none;
+    /* Remove o sublinhado dos links. */
+    transition: color 0.3s;
+    /* Aplica uma transição suave de 0.3 segundos para a cor ao passar o mouse. */
+}
+
+/* Cor ao passar o mouse */
+.menu a:hover {
+    color: #065a30;
+    /* Muda a cor do texto ao passar o mouse. */
+}
+
+/* Background da página */
+body {
+    background-image: url(./fundohome.png);
+    /* Define a imagem de fundo a partir do arquivo especificado. */
+    background-size: cover;
+    /* Faz a imagem de fundo cobrir toda a área do elemento. */
+    background-attachment: fixed;
+    /* Mantém a imagem de fundo fixa durante a rolagem da página. */
+    background-position: center;
+    /* Centraliza a imagem de fundo no elemento. */
+}
+
+
+
+/* Formatação do conteúdo das páginas*/
+main {
+    display: flex;
+    padding-top: 40px;
+    /* Adiciona 40px de espaço acima do texto */
+    color: rgb(254, 240, 255);
+    justify-content: center;
+    /* Centraliza horizontalmente os itens do flex */
+    align-items: center;
+    /* Centraliza verticalmente os itens do flex */
+}
+
+/* Estilos de texto */
+#home {
+    
+    font-family: 'Times New Roman', Times, serif;
+    /* Define a família da fonte para o texto. */
+    font-size: 45px;
+    /* Define o tamanho da fonte como 45 pixels. */
+    font-weight: bold;
+    /* Aplica o estilo negrito ao texto. */
+    color: rgb(255, 255, 255);
+    /* Define a cor do texto como branco. */
+    filter: drop-shadow(1px 1px 20px rgba(110, 156, 118, 0.685));
+    /* Aplica uma sombra azul clara ao texto. */
+    opacity: 1;
+    /* Define a opacidade do texto como totalmente visível. */
+    transition: 0 5s ease;
+    /* Define uma transição suave para a opacidade em 5 segundos. */
+    text-align: center;
+    
+}
+
+
+.box {
+    background-color: rgba(95, 189, 145, 0.373);
+    width: 600px;
+    height: 250px;
+    display: flex;
+    /* Ativa o layout Flexbox. */
+    justify-content: end;
+    /* Centraliza os itens horizontalmente. */
+    align-items: center;
+    /* Alinha os itens verticalmente. */
+    backdrop-filter: blur(30px);
+    /* Aplica desfoque ao fundo. */
+    box-shadow: 0px 0px 30px rgb(218, 216, 216);
+    /* Adiciona sombra ao redor. */
+    border: 2px solid rgba(245, 245, 245, 0.281);
+    /* Define borda branca semi-transparente. */
+    position: sticky;
+    /* Fixa o elemento ao rolar a página. */
+}
+p{
+    color: rgb(51, 51, 51);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    position: relative;
+}
+
+footer {
+
+    position: fixed;
+    /* Fixa o footer na parte inferior da página */
+    bottom: 0;
+    /* Posiciona o footer na parte inferior */
+    right: 0;
+    /* Alinha o footer à direita */
+    background-color: none;
+    /* Cor de fundo do footer */
+    color: #6b6262;
+    /* Cor do texto */
+    padding: 10px 20px;
+    /* Espaçamento interno do footer */
+    text-align: right;
+    /* Alinha o texto à direita */
+    width: 100%;
+    /* Define a largura do footer */
+
+
+}

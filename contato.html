@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./Stylesheetcontato.css">
+
+    <title>CV Page</title>
+</head>
+
+<body class="contatopage">
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./sobre.html">Sobre mim</a></li>
+            <li><a href="./curriculo.html">Currículo</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Estrutura da seção "Contato" -->
+        <section id="contato">
+            <p>Entre em contato comigo!</p>
+            <div class="box">
+                <form id="contactForm">
+                  <label for="nome">Nome:</label>
+                  <input type="text" id="nome" name="nome" required>
+            
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+            
+                  <label for="assunto">Assunto:</label>
+                  <input type="text" id="assunto" name="assunto" required>
+            
+                  <label for="mensagem">Mensagem:</label>
+                  <textarea id="mensagem" name="mensagem" required></textarea>
+            
+                  <button type="submit">Enviar</button>
+                </form>
+                <p id="responseMessage"></p> <!-- Para exibir a resposta -->
+                <p>Interessado nos meus trabalhos de arte e escrita?</p>
+                <button id="linktree" onclick="window.location.href='https://linktr.ee/artfrancamargo';"> Conheça meus produtos clicando neste botão </button>
+              </div>
+              
+        </section>
+
+
+    </main>
+    <footer>
+        &COPY; 2024 - Site desenvolvido por Franciely Camargo.
+    </footer>
+</body>
+
+</html>

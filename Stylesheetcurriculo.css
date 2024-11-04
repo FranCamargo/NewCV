@@ -1,0 +1,199 @@
+/* Estilos da barra de navegação */
+.navbar {
+    display: flex; /* Ativa Flexbox para o layout */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    align-items: center; /* Centraliza itens verticalmente */
+    backdrop-filter: blur(30px); /* Aplica desfoque ao fundo */
+    box-shadow: 0px 0px 30px rgba(197, 197, 197, 0.651); /* Adiciona sombra ao redor */
+    border: 2px solid rgba(255, 255, 255, 0.466); /* Borda branca semi-transparente */
+    position: sticky; /* Fixa a barra ao rolar a página */
+    top: 0; /* Posiciona a barra no topo */
+    border-radius: 30px; /* Arredonda cantos */
+    height: 60px; /* Define altura fixa */
+    margin: 20px auto; /* Margem vertical e centralização horizontal */
+    padding: 0 10px; /* Espaçamento lateral */
+    max-width: 800px; /* Largura máxima de 800px */
+}
+
+/* Estilos do menu */
+.menu {
+    display: flex; /* Ativa Flexbox para o layout */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha itens verticalmente */
+    list-style: none; /* Remove marcadores de lista */
+    gap: 70px; /* Espaçamento entre itens */
+}
+
+/* Links do menu */
+.menu a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Define família de fontes */
+    font-size: 25px; /* Tamanho da fonte */
+    color: rgb(201, 201, 201); /* Cor inicial do texto */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave da cor no hover */
+}
+
+/* Cor ao passar o mouse */
+.menu a:hover {
+    color: #065a30; /* Cor ao passar o mouse */
+}
+
+/* Imagem de fundo da página */
+.background {
+    background-image: url(./fundoprodutos.png); /* Imagem de fundo */
+    background-size: cover; /* Imagem cobre toda a área */
+    background-attachment: fixed; /* Fundo fixo ao rolar */
+    background-position: center; /* Centraliza a imagem */
+    position: fixed; /* Fixa fundo na viewport */
+    top: 0; /* Topo do fundo na parte superior */
+    left: 0; /* Fundo alinhado à esquerda */
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport */
+    z-index: -1; /* Coloca o fundo atrás dos elementos */
+}
+
+/* Reset e estilo da página */
+* {
+    box-sizing: border-box; /* Define box model */
+    margin: 0; /* Remove margem */
+    padding: 0; /* Remove padding */
+}
+
+/* Container dos painéis para centralizá-los */
+.panel-container {
+    display: flex; /* Ativa Flexbox */
+    position: relative; /* Posicionamento relativo */
+    width: 600px; /* Largura fixa */
+    height: 600px; /* Altura fixa */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Configuração básica dos painéis */
+.panel {
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; /* Alinhamento ao topo */
+    left: 0; /* Alinhamento à esquerda */
+    width: 100%; /* Largura total do container */
+    height: 100%; /* Altura total do container */
+    padding: 20px; /* Espaço interno */
+    box-shadow: 0 4px 20px rgba(166, 168, 168, 0.542);
+    /* Sombra ao redor da caixa */
+    border: 1px solid rgba(255, 255, 255, 0.119);
+    line-height: 1.5; /* Espaço entre linhas */
+    border-radius: 8px; /* Cantos arredondados */
+    text-align: start; /* Texto alinhado à esquerda */
+    background: rgba(79, 124, 101, 0.678);
+    color: #ffffff; /* Cor do texto */
+    transition: transform 0.20s ease, opacity 0.5s ease; /* Transições suaves */
+    z-index: 0; /* Painéis inativos atrás */
+    opacity: 0; /* Painel invisível inicialmente */
+    transform: translateX(100px) scale(0.1); /* Inicialmente fora de vista */
+    overflow-y: scroll; /* Ativa rolagem vertical */
+}
+
+p {
+    margin-left: 10px; /* Recuo para o texto */
+}
+
+h2 {
+    font-family: 'Lucida Sans', sans-serif; /* Fonte para títulos */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+h3 {
+    font-family: 'Lucida Sans', sans-serif; /* Fonte para subtítulos */
+    color: #ffffff; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Painel ativo: visível e em destaque */
+.panel.active {
+    z-index: 1; /* Aparece acima dos outros */
+    opacity: 1; /* Totalmente visível */
+    transform: translateX(0) scale(1); /* Retorna à posição original */
+}
+
+/* Painéis inativos quando o ativo está em foco */
+.panel.inactive {
+    opacity: 0; /* Invisível */
+    transform: translateX(-100px) scale(0.8); /* Fora de vista */
+    z-index: 0; /* Painéis inativos atrás */
+}
+
+/* Estilos dos botões de navegação */
+.navigation-buttons {
+    align-content: center; /* Centraliza conteúdo verticalmente */
+    align-self: center; /* Centraliza o item no container flex */
+    gap: 50px; /* Espaço entre botões */
+    padding: 10px 20px; /* Espaço interno dos botões */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    border: 1px; /* Borda de 1px */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.5s ease; /* Transição suave de cor */
+    border-radius: 10px; /* Bordas arredondadas */
+    position: relative; /* Posicionamento relativo */
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza itens horizontalmente */
+    max-width: 120px; /* Largura máxima */
+    max-height: 70px; /* Altura máxima */
+    left: 25%; /* Deslocamento à esquerda */
+}
+
+/* Estilo para o botão pai */
+.parent-button {
+    background-color: #40ac8b; /* Cor de fundo */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 10%; /* Bordas arredondadas */
+    width: 150px; /* Largura fixa */
+    height: 150px; /* Altura fixa */
+    cursor: pointer; /* Cursor de clique */
+    font-size: 16px; /* Tamanho da fonte */
+    flex-direction: column; /* Direção vertical */
+    position: relative; /* Posicionamento relativo */
+    bottom: 60px; /* Distância do botão pai */
+    left: 30%; /* Deslocamento à esquerda */
+}
+
+#fab:hover,
+#fab.hover-active {
+    background-color: rgb(27, 92, 60); /* Cor de hover */
+}
+
+/* Estilos dos botões filhos */
+.child-buttons {
+    display: flex; /* Ativa Flexbox */
+    flex-direction: column; /* Direção vertical */
+    position: absolute; /* Posicionamento absoluto */
+    bottom: 130px; /* Posição abaixo do botão pai */
+    left: 70%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Compensa deslocamento horizontal */
+    gap: 5px; /* Espaço entre botões */
+}
+
+/* Botões filhos */
+.child-button {
+    margin: 10px 0; /* Espaço vertical entre botões */
+    background-color: #ffffff; /* Fundo branco */
+    color: #043128; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px 15px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de clique */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilos do rodapé */
+footer {
+    position: fixed; /* Fixa no fim da página */
+    bottom: 0; /* Alinha ao fundo */
+    right: 0; /* Alinha à direita */
+    background-color: none; /* Fundo transparente */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: right; /* Texto alinhado à direita */
+    width: 100%; /* Largura total */
+}
