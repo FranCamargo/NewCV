@@ -3,28 +3,26 @@ $(document).ready(function() {
   // Abre a página com botões filhos escondidos
   $(".child-buttons").hide();
 
-  // Exibe os botões ao clicar em Currículo
+  // Exibe os botões ao clicar em "Currículo"
   $("#fab").click(function() {
-      $(".child-buttons").show();
-      $(this).addClass("hover-active"); // Adiciona a classe que mantém o estilo de hover
-    });
+      $(".child-buttons").show(); // Exibe os botões filhos
+      $(this).addClass("hover-active"); // Adiciona classe que mantém o estilo de hover
   });
 
-  // Esconde os botões ao dar duplo clique em Currículo
+  // Esconde os botões ao dar duplo clique em "Currículo"
   $("#fab").dblclick(function() {
-      $(".child-buttons").hide();
+      $(".child-buttons").hide(); // Oculta os botões filhos
       $(this).removeClass("hover-active"); // Remove a classe de hover
-            });
-
-                
+  });
+});
 
 function setActivePanel(index) {
-  // Seleciona todos os elementos com a classe 'panel' e os armazena em uma NodeList
+  // Seleciona todos os elementos com a classe 'panel'
   const panels = document.querySelectorAll(".panel");
 
   // Remove a classe 'active' de todos os painéis
   panels.forEach((panel, i) => {
-    panel.classList.remove("active"); // Para cada painel, remove a classe 'active'
+    panel.classList.remove("active"); // Remove a classe 'active' de cada painel
   });
 
   // Adiciona a classe 'active' ao painel que corresponde ao índice fornecido
@@ -35,7 +33,7 @@ function setActivePanel(index) {
     // Itera sobre os painéis para resetar a transformação
     panels.forEach((panel, i) => {
       if (i !== index) {
-        panel.style.transform = ""; // Reseta a transformação dos painéis que não estão ativos
+        panel.style.transform = ""; // Reseta a transformação dos painéis não ativos
       }
     });
   }, 300); // O tempo deve corresponder ao tempo de transição CSS
@@ -43,41 +41,16 @@ function setActivePanel(index) {
 
 function mostrarPainel(numeroDoPainel) {
   // Seleciona todos os elementos com a classe 'panel'
-  const paineis = document.querySelectorAll("panel");
+  const paineis = document.querySelectorAll(".panel");
 
-  // Função para alternar entre painéis ativos e inativos
+  // Alterna entre painéis ativos e inativos
   paineis.forEach((painel, index) => {
-    if (index === numeroDoPainel - 1) {
-      // Se o índice do painel atual é igual ao número do painel desejado (ajustado para zero)
-      painel.classList.add("active"); // Adiciona a classe 'active' ao painel
-      painel.classList.remove("inactive"); // Remove a classe 'inactive'
-    } else {
-      // Se o índice do painel atual não é o desejado
-      painel.classList.add("inactive"); // Adiciona a classe 'inactive'
-      painel.classList.remove("active"); // Remove a classe 'active'
+    if (index === numeroDoPainel - 1) { 
+      painel.classList.add("active"); // Adiciona 'active' ao painel desejado
+      painel.classList.remove("inactive"); // Remove 'inactive'
+    } else { 
+      painel.classList.add("inactive"); // Adiciona 'inactive' aos outros painéis
+      painel.classList.remove("active"); // Remove 'active' dos outros painéis
     }
   });
 }
-
-//Funcionamento do formulário em contato.
-
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
-
-  const nome = document.getElementById('nome').value;
-  const email = document.getElementById('email').value;
-  const assunto = document.getElementById('assunto').value;
-  const mensagem = document.getElementById('mensagem').value;
-
-  try {
-    const response = await fetch('http://localhost:3000/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nome, email, assunto, mensagem })
-    });
-
-    const result = await response.json();
-    document.getElementById('responseMessage').innerText = result.message;
-  } catch (error) {
-    console.error('Erro ao enviar:', error);
-    document.getElementById('responseMessage').innerText = 'Erro ao enviar o email'};})

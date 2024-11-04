@@ -17,36 +17,21 @@
             <li><a href="./contato.html">Contato</a></li>
         </ul>
     </nav>
-
     <main>
-
         <!-- Estrutura da seção "Contato" -->
         <section id="contato">
             <p>Entre em contato comigo!</p>
             <div class="box">
-                <form id="contactForm">
-                  <label for="nome">Nome:</label>
-                  <input type="text" id="nome" name="nome" required>
-            
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required>
-            
-                  <label for="assunto">Assunto:</label>
-                  <input type="text" id="assunto" name="assunto" required>
-            
-                  <label for="mensagem">Mensagem:</label>
-                  <textarea id="mensagem" name="mensagem" required></textarea>
-            
-                  <button type="submit">Enviar</button>
-                </form>
-                <p id="responseMessage"></p> <!-- Para exibir a resposta -->
-                <p>Interessado nos meus trabalhos de arte e escrita?</p>
-                <button id="linktree" onclick="window.location.href='https://linktr.ee/artfrancamargo';"> Conheça meus produtos clicando neste botão </button>
-              </div>
-              
+                <p>Gostaria de entrar em contato via email?</p>
+                <button id="button"><a
+                        href="mailto:francamargoads@gmail.com?subject=Contato&body=Escreva%20sua%20mensagem%20aqui.">Clique
+                        para enviar email</a></button>
+                <p>Quer acessar outros links com meus trabalhos de arte e escrita?</p>
+                <button id="linktree" onclick="window.location.href='https://linktr.ee/artfrancamargo';"> Clique para
+                    conhecer meus produtos </button>
+            </div>
+            <script src="./javascript.js"> </script>
         </section>
-
-
     </main>
     <footer>
         &COPY; 2024 - Site desenvolvido por Franciely Camargo.
