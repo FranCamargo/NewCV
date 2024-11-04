@@ -1,18 +1,17 @@
-$(document).ready(function() {
-  
+$(document).ready(function () {
   // Abre a página com botões filhos escondidos
   $(".child-buttons").hide();
 
   // Exibe os botões ao clicar em "Currículo"
-  $("#fab").click(function() {
-      $(".child-buttons").show(); // Exibe os botões filhos
-      $(this).addClass("hover-active"); // Adiciona classe que mantém o estilo de hover
+  $("#fab").click(function () {
+    $(".child-buttons").show(); // Exibe os botões filhos
+    $(this).addClass("hover-active"); // Adiciona classe que mantém o estilo de hover
   });
 
   // Esconde os botões ao dar duplo clique em "Currículo"
-  $("#fab").dblclick(function() {
-      $(".child-buttons").hide(); // Oculta os botões filhos
-      $(this).removeClass("hover-active"); // Remove a classe de hover
+  $("#fab").dblclick(function () {
+    $(".child-buttons").hide(); // Oculta os botões filhos
+    $(this).removeClass("hover-active"); // Remove a classe de hover
   });
 });
 
@@ -45,12 +44,13 @@ function mostrarPainel(numeroDoPainel) {
 
   // Alterna entre painéis ativos e inativos
   paineis.forEach((painel, index) => {
-    if (index === numeroDoPainel - 1) { 
+    if (index === numeroDoPainel - 1) {
       painel.classList.add("active"); // Adiciona 'active' ao painel desejado
       painel.classList.remove("inactive"); // Remove 'inactive'
-    } else { 
+    } else {
       painel.classList.add("inactive"); // Adiciona 'inactive' aos outros painéis
       painel.classList.remove("active"); // Remove 'active' dos outros painéis
     }
   });
 }
+

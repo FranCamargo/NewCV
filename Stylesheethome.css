@@ -136,24 +136,14 @@ p{
     position: relative;
 }
 
+/* Estilos do rodapé */
 footer {
-
-    position: fixed;
-    /* Fixa o footer na parte inferior da página */
-    bottom: 0;
-    /* Posiciona o footer na parte inferior */
-    right: 0;
-    /* Alinha o footer à direita */
-    background-color: none;
-    /* Cor de fundo do footer */
-    color: #6b6262;
-    /* Cor do texto */
-    padding: 10px 20px;
-    /* Espaçamento interno do footer */
-    text-align: right;
-    /* Alinha o texto à direita */
-    width: 100%;
-    /* Define a largura do footer */
-
-
+    position: fixed; /* Fixa no fim da página */
+    bottom: 0; /* Alinha ao fundo */
+    right: 0; /* Alinha à direita */
+    background-color: none; /* Fundo transparente */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: right; /* Texto alinhado à direita */
+    width: 100%; /* Largura total */
 }
