@@ -101,6 +101,9 @@ p, h1 {
 #linktree:hover {
     background-color: #441b4e; /* Cor ao passar o mouse */
 }
+#whats{
+    
+}
 
 footer {
     position: fixed; /* Fixo na tela */
