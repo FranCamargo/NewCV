@@ -111,8 +111,8 @@ main {
 
 
 .box {
-    background-color: rgba(95, 189, 145, 0.373);
-    width: 600px;
+    background-color: rgba(71, 168, 123, 0.312);
+    width: 500px;
     height: 250px;
     display: flex;
     /* Ativa o layout Flexbox. */
@@ -126,11 +126,12 @@ main {
     /* Adiciona sombra ao redor. */
     border: 2px solid rgba(245, 245, 245, 0.281);
     /* Define borda branca semi-transparente. */
+    border-radius: 10px;
     position: sticky;
     /* Fixa o elemento ao rolar a página. */
 }
 p{
-    color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     position: relative;

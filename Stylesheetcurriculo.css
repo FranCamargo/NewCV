@@ -71,8 +71,10 @@
 /* Configuração básica dos painéis */
 .panel {
     position: absolute; /* Posicionamento absoluto */
+    min-width: 500px;
+    min-height: 500px;
     top: 0; /* Alinhamento ao topo */
-    left: 0; /* Alinhamento à esquerda */
+    left: 20%; /* Alinhamento à esquerda */
     width: 100%; /* Largura total do container */
     height: 100%; /* Altura total do container */
     padding: 20px; /* Espaço interno */
@@ -133,18 +135,21 @@ h3 {
     cursor: pointer; /* Cursor de clique */
     transition: background-color 0.5s ease; /* Transição suave de cor */
     border-radius: 10px; /* Bordas arredondadas */
-    position: relative; /* Posicionamento relativo */
+    position: fixed; /* Posicionamento relativo */
     display: flex; /* Flexbox para layout */
     flex-direction: column; /* Itens em coluna */
     align-items: center; /* Centraliza itens horizontalmente */
     max-width: 120px; /* Largura máxima */
     max-height: 70px; /* Altura máxima */
-    left: 25%; /* Deslocamento à esquerda */
+/* Deslocamento à esquerda */
+    right: 70%;
+    z-index: 1;
+
 }
 
 /* Estilo para o botão pai */
 .parent-button {
-    background-color: #40ac8b; /* Cor de fundo */
+    background-color: #376859; /* Cor de fundo */
     color: rgb(255, 255, 255); /* Cor do texto */
     border: none; /* Remove borda */
     border-radius: 10%; /* Bordas arredondadas */
@@ -156,11 +161,41 @@ h3 {
     position: relative; /* Posicionamento relativo */
     bottom: 60px; /* Distância do botão pai */
     left: 30%; /* Deslocamento à esquerda */
+    overflow: hidden; /* Oculta o overflow dos pseudoelementos */
 }
 
-#fab:hover,
-#fab.hover-active {
+/* Configuração para o efeito de luz no botão pai */
+.parent-button::before,
+.parent-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    top: 100%;
+    left: 0;
+    transition: top 0.4s ease, bottom 0.4s ease;
+}
+
+.parent-button::after {
+    top: auto;
+    bottom: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.));
+}
+
+/* Efeito de luz ao passar o mouse */
+.parent-button:hover::before {
+    top: 0;
+}
+
+.parent-button:hover::after {
+    bottom: 0;
+}
+
+/* Efeito de transformação e mudança de cor ao passar o mouse */
+.parent-button:hover {
     background-color: rgb(27, 92, 60); /* Cor de hover */
+    transform: scale(1.05);
 }
 
 /* Estilos dos botões filhos */
@@ -184,6 +219,42 @@ h3 {
     padding: 10px 15px; /* Espaçamento interno */
     cursor: pointer; /* Cursor de clique */
     font-size: 16px; /* Tamanho da fonte */
+    position: relative; /* Necessário para os pseudoelementos */
+    overflow: hidden; /* Oculta o overflow dos pseudoelementos */
+}
+
+/* Efeito de luz nos botões filhos */
+.child-button::before,
+.child-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    top: 100%;
+    left: 0;
+    transition: top 0.4s ease, bottom 0.4s ease;
+}
+
+.child-button::after {
+    top: auto;
+    bottom: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+}
+
+/* Efeito de luz ao passar o mouse */
+.child-button:hover::before {
+    top: 0;
+}
+
+.child-button:hover::after {
+    bottom: 0;
+}
+
+/* Efeito de transformação e mudança de cor ao passar o mouse */
+.child-button:hover {
+    background-color: #b9f7da; /* Cor de hover */
+    transform: scale(1.05);
 }
 
 /* Estilos do rodapé */

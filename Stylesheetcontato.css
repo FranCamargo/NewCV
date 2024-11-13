@@ -1,116 +1,208 @@
 /* Estilos da barra de navegação */
 .navbar {
-    display: flex; /* Layout Flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Alinha verticalmente */
-    backdrop-filter: blur(30px); /* Desfoque no fundo */
-    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra */
-    border: 2px solid rgba(199, 199, 199, 0.021); /* Borda semi-transparente */
-    position: sticky; /* Fixa ao rolar */
-    top: 0; /* No topo */
-    border-radius: 30px; /* Cantos arredondados */
-    height: 60px; /* Altura fixa */
-    margin: 20px auto; /* Margem vertical e centralização */
-    padding: 0 10px; /* Espaço interno nas laterais */
-    max-width: 800px; /* Largura máxima */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px #fff;
+    border: 2px solid rgba(199, 199, 199, 0.021);
+    position: sticky;
+    top: 0;
+    border-radius: 30px;
+    height: 60px;
+    margin: 20px auto;
+    padding: 0 10px;
+    max-width: 800px;
 }
 
 /* Estilos do menu */
 .menu {
-    display: flex; /* Layout Flexbox */
-    justify-content: space-between; /* Espaço entre itens */
-    align-items: center; /* Alinhamento vertical */
-    list-style: none; /* Remove marcadores */
-    gap: 70px; /* Espaço entre itens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 70px;
 }
 
 /* Links do menu */
 .menu a {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fonte */
-    font-size: 25px; /* Tamanho da fonte */
-    color: rgb(216, 216, 216); /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    transition: color 0.3s; /* Transição suave de cor */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color: #d8d8d8;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 /* Cor ao passar o mouse */
 .menu a:hover {
-    color: #0d5839; /* Cor ao passar o mouse */
+    color: #0d5839;
 }
 
 body.contatopage {
-    background-image: url(./fundocontato.png); /* Imagem de fundo */
-    background-size: cover; /* Cobrir área do fundo */
-    background-attachment: fixed; /* Fundo fixo */
-    background-position: center; /* Fundo centralizado */
+    background: url(./fundocontato.png) center/cover fixed no-repeat;
 }
 
 /* Estilos gerais */
 * {
     position: relative;
-    box-sizing: border-box; /* Box model */
-    font-family: Arial, sans-serif; /* Fonte geral */
-    color: white; /* Cor do texto */
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
-p, h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Fonte */
-    text-align: center; /* Alinhamento central */
-    margin-top: 50px; /* Margem superior */
-    font-size: 16px; /* Tamanho da fonte */
+p,
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 /* Estilos da caixa do formulário */
 .box {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     justify-content: center;
-    background-color: #395f42a2; /* Cor de fundo verde */
-    border: 1px solid #c3e6cb; /* Borda verde */
-    box-shadow: 0px 4px 8px rgba(45, 65, 38, 0.925); /* Sombra */
-    padding: 20px; /* Espaço interno */
-    max-width: 300px; /* Largura máxima */
+    background-color: #62be7677;
+    border: 1px solid #cfdbd260;
+    box-shadow: 0 4px 8px rgba(9, 14, 7, 0.725);
+    padding: 20px;
     width: 300px;
-    height: auto;
-    margin: 30px auto; /* Margem e centralização */
-    border-radius: 5px; /* Cantos arredondados */
-    margin-top: 10px;
+    max-width: 100%;
+    margin: 30px auto 10px;
+    border-radius: 5px;
 }
 
-#button, #linktree {
+/* Estilos do link */
+#linktree {
     display: flex;
     align-self: center;
     text-decoration: none;
-    margin-top: 15px; /* Margem superior */
-    padding: 10px; /* Espaço interno */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Cantos arredondados */
-    background-color: #5a3a77; /* Cor de fundo verde */
-    color: rgb(255, 255, 255); /* Cor do texto */
-    font-size: 16px; /* Tamanho da fonte */
-    cursor: pointer; /* Mãozinha ao passar o mouse */
-    transition: background-color 0.3s; /* Transição de cor */
-    
+    padding: 10px;
+    background-color: #396bd6;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-#button:hover {
-    background-color: #0d3516; /* Cor ao passar o mouse */
+/* Efeito de luz */
+#linktree::before,
+#linktree::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    top: 100%;
+    left: 0;
+    transition: top 0.4s ease, bottom 0.4s ease;
+}
+
+#linktree::after {
+    top: auto;
+    bottom: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.212));
+}
+
+#linktree:hover::before {
+    top: 0;
+}
+
+#linktree:hover::after {
+    bottom: 0;
 }
 
 #linktree:hover {
-    background-color: #441b4e; /* Cor ao passar o mouse */
-}
-#whats{
-    
+    background-color: #396bd6;
+    transform: scale(1.05);
 }
 
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#email-button,
+#whats-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#email-button {
+    background-color: #5a3a77;
+}
+
+#whats-button {
+    background-color: #2baa5c;
+}
+
+/* Efeito de luz para botões */
+#email-button::before,
+#email-button::after,
+#whats-button::before,
+#whats-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(88, 97, 97, 0.3));
+    top: 100%;
+    left: 0;
+    transition: top 0.4s ease, bottom 0.4s ease;
+}
+
+#email-button::after,
+#whats-button::after {
+    top: auto;
+    bottom: 100%;
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(255, 255, 255, 0.3));
+}
+
+#email-button:hover::before,
+#whats-button:hover::before {
+    top: 0;
+}
+
+#email-button:hover::after,
+#whats-button:hover::after {
+    bottom: 0;
+}
+
+/* Efeito de transformação e mudança de cor ao passar o mouse */
+#email-button:hover {
+    background-color: #4a2a67;
+    transform: scale(1.05);
+}
+
+#whats-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.emoji {
+    font-size: 30px; /* Aumenta o tamanho do emoji */
+}
+
+/* Estilos do rodapé */
 footer {
-    position: fixed; /* Fixo na tela */
-    bottom: 0; /* Alinha no fundo */
-    right: 0; /* Alinha à direita */
-    color: #6b6262; /* Cor do texto */
-    padding: 10px 20px; /* Espaço interno */
-    text-align: right; /* Alinhamento à direita */
-    width: 100%; /* Largura completa */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #6b6262;
+    padding: 10px 20px;
+    text-align: right;
+    width: 100%;
 }
