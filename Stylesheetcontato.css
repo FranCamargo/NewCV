@@ -1,29 +1,54 @@
+
 /* Estilos da barra de navegação */
 .navbar {
     display: flex;
+    /* Ativa o layout Flexbox. */
     justify-content: center;
+    /* Centraliza os itens horizontalmente. */
     align-items: center;
+    /* Alinha os itens verticalmente. */
     backdrop-filter: blur(30px);
-    box-shadow: 0 0 30px #fff;
-    border: 2px solid rgba(199, 199, 199, 0.021);
-    position: sticky;
+    /* Aplica desfoque ao fundo. */
+    box-sizing: border-box;
+    box-shadow: 0px 0px 30px rgb(158, 152, 152);
+    /* Adiciona sombra ao redor. */
+    border: 2px solid rgba(29, 27, 27, 0.205);
+    /* Define borda branca semi-transparente. */
+    position: relative;
+    /* Fixa o elemento ao rolar a página. */
     top: 0;
+    /* Coloca o elemento no topo. */
     border-radius: 30px;
+    /* Arredonda os cantos. */
     height: 60px;
+    /* Define altura fixa. */
     margin: 20px auto;
+    /* Margem vertical de 20px e centraliza horizontalmente. */
     padding: 0 10px;
-    max-width: 800px;
+    /* Espaço interno de 20px nas laterais. */
+    max-width: 40%;
+    width: 70%;
+    overflow: hidden;
+
 }
 
 /* Estilos do menu */
 .menu {
     display: flex;
+    /* Ativa o layout Flexbox. */
     justify-content: space-between;
+    /* Distribui espaço entre os itens. */
     align-items: center;
+    /* Alinha os itens verticalmente. */
     list-style: none;
-    gap: 70px;
+    /* Remove marcadores da lista. */
+    left: 0px; /* Alinha à esquerda do .navbar */
+    right: 40px; /* Limita a largura máxima ao .navbar */
+    position: fixed;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
-
 /* Links do menu */
 .menu a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -54,7 +79,7 @@ p,
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 16px;
 }
 
@@ -64,9 +89,9 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #62be7677;
-    border: 1px solid #cfdbd260;
-    box-shadow: 0 4px 8px rgba(9, 14, 7, 0.725);
+    background-color: rgba(23, 65, 39, 0.35);
+    border: 1px solid #9aa59d60;
+    box-shadow: 0 4px 8px rgba(9, 14, 7, 0.225);
     padding: 20px;
     width: 300px;
     max-width: 100%;
@@ -198,11 +223,12 @@ h1 {
 
 /* Estilos do rodapé */
 footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    color: #6b6262;
-    padding: 10px 20px;
-    text-align: right;
-    width: 100%;
+    position: fixed; /* Fixa no fim da página */
+    bottom: 0; /* Alinha ao fundo */
+    right: 0; /* Alinha à direita */
+    background-color: none; /* Fundo transparente */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: right; /* Texto alinhado à direita */
+    width: 100%; /* Largura total */
 }

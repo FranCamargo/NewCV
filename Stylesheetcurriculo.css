@@ -1,29 +1,54 @@
+
 /* Estilos da barra de navegação */
 .navbar {
-    display: flex; /* Ativa Flexbox para o layout */
-    justify-content: center; /* Centraliza itens horizontalmente */
-    align-items: center; /* Centraliza itens verticalmente */
-    backdrop-filter: blur(30px); /* Aplica desfoque ao fundo */
-    box-shadow: 0px 0px 30px rgba(197, 197, 197, 0.651); /* Adiciona sombra ao redor */
-    border: 2px solid rgba(255, 255, 255, 0.466); /* Borda branca semi-transparente */
-    position: sticky; /* Fixa a barra ao rolar a página */
-    top: 0; /* Posiciona a barra no topo */
-    border-radius: 30px; /* Arredonda cantos */
-    height: 60px; /* Define altura fixa */
-    margin: 20px auto; /* Margem vertical e centralização horizontal */
-    padding: 0 10px; /* Espaçamento lateral */
-    max-width: 800px; /* Largura máxima de 800px */
+    display: flex;
+    /* Ativa o layout Flexbox. */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente. */
+    align-items: center;
+    /* Alinha os itens verticalmente. */
+    backdrop-filter: blur(30px);
+    /* Aplica desfoque ao fundo. */
+    box-sizing: border-box;
+    box-shadow: 0px 0px 30px rgb(158, 152, 152);
+    /* Adiciona sombra ao redor. */
+    border: 2px solid rgba(29, 27, 27, 0.205);
+    /* Define borda branca semi-transparente. */
+    position: relative;
+    /* Fixa o elemento ao rolar a página. */
+    top: 0;
+    /* Coloca o elemento no topo. */
+    border-radius: 30px;
+    /* Arredonda os cantos. */
+    height: 60px;
+    /* Define altura fixa. */
+    margin: 20px auto;
+    /* Margem vertical de 20px e centraliza horizontalmente. */
+    padding: 0 10px;
+    /* Espaço interno de 20px nas laterais. */
+    max-width: 40%;
+    width: 70%;
+    overflow: hidden;
+
 }
 
 /* Estilos do menu */
 .menu {
-    display: flex; /* Ativa Flexbox para o layout */
-    justify-content: space-between; /* Espaço entre os itens */
-    align-items: center; /* Alinha itens verticalmente */
-    list-style: none; /* Remove marcadores de lista */
-    gap: 70px; /* Espaçamento entre itens */
+    display: flex;
+    /* Ativa o layout Flexbox. */
+    justify-content: space-between;
+    /* Distribui espaço entre os itens. */
+    align-items: center;
+    /* Alinha os itens verticalmente. */
+    list-style: none;
+    /* Remove marcadores da lista. */
+    left: 40px; /* Alinha à esquerda do .navbar */
+    right: 40px; /* Limita a largura máxima ao .navbar */
+    position: fixed;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
-
 /* Links do menu */
 .menu a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Define família de fontes */
@@ -66,6 +91,7 @@
     width: 600px; /* Largura fixa */
     height: 600px; /* Altura fixa */
     margin: 0 auto; /* Centraliza horizontalmente */
+
 }
 
 /* Configuração básica dos painéis */
@@ -91,6 +117,8 @@
     opacity: 0; /* Painel invisível inicialmente */
     transform: translateX(100px) scale(0.1); /* Inicialmente fora de vista */
     overflow-y: scroll; /* Ativa rolagem vertical */
+    max-width: 600px; /* Largura fixa */
+    max-height: 600px; 
 }
 
 p {
