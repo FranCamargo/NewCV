@@ -20,17 +20,14 @@
     <main>
         <!-- Estrutura da seção "Contato" -->
         <section id="contato">
-            <p id="título">Entre em contato comigo!</p>
+            <p id="titulo">Entre em contato comigo!</p>
             <div class="box">
                 <p>Formas de Contato:</p>
                 <div class="button-container">
-                    <button id="email-button">
-                        <a href="mailto:francamargoads@gmail.com?subject=Contato&body=Escreva%20sua%20mensagem%20aqui.">Email</a>
-                    </button>
-                    
-                    <button id="whats-button">
-                        <a href="https://api.whatsapp.com/send?phone=5547988283491&text=Olá, eu vim do teu site" target="_blank">Whatsapp</a>
-                    </button>
+                    <button id="email-button" onclick="window.location.href = 'mailto:francamargoads@gmail.com?subject=Contato&body=Escreva%20sua%20mensagem%20aqui.';">Email</button>
+
+<button id="whats-button" onclick="window.open('https://api.whatsapp.com/send?phone=5547988283491&text=Olá, eu vim do teu site', '_blank');">Whatsapp</button>
+
                 <button id="linktree" onclick="window.location.href='https://linktr.ee/artfrancamargo';"> Linktree </button>
             </div>
             <script src="./jquery-3.7.1.min.js"></script>
