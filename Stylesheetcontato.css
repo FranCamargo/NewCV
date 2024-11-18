@@ -1,4 +1,3 @@
-
 /* Estilos da barra de navegação */
 .navbar {
     display: flex;
@@ -41,13 +40,16 @@
     /* Alinha os itens verticalmente. */
     list-style: none;
     /* Remove marcadores da lista. */
-    left: 0px; /* Alinha à esquerda do .navbar */
-    right: 40px; /* Limita a largura máxima ao .navbar */
+    left: 0px;
+    /* Alinha à esquerda do .navbar */
+    right: 40px;
+    /* Limita a largura máxima ao .navbar */
     position: fixed;
     max-width: 100%;
     overflow: hidden;
     box-sizing: border-box;
 }
+
 /* Links do menu */
 .menu a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -77,6 +79,7 @@ body.contatopage {
     text-align: center;
     font-size: 20px;
 }
+
 p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -88,11 +91,12 @@ p {
 .box {
     display: grid;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     justify-content: center;
-    background-color: rgba(23, 65, 39, 0.35);
-    border: 1px solid #9aa59d60;
-    box-shadow: 0 4px 8px rgba(9, 14, 7, 0.225);
+    background-color: rgba(255, 255, 255, 0.493);
+    border: 1px solid #cecece81;
+    box-shadow: 0 4px 8px rgba(111, 129, 104, 0.438);
     padding: 20px;
     width: 300px;
     max-width: 100%;
@@ -100,47 +104,81 @@ p {
     border-radius: 5px;
 }
 
-/* Estilos do link */
-#linktree {
-    display: relative;
-    align-self: center;
-    text-decoration: none;
-    padding: 10px;
-    background-color: #396bd6;
-    color: #fff;
-    font-size: 16px;
+/* Estilos gerais dos links */
+#linktree,
+#whats-button,
+#email-button,
+#github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    /* Ajusta o tamanho dos ícones */
+    height: 100px;
+    background-color: transparent;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s ease;
-    position: relative;
+    transition: background-color 0.3s ease, transform 0.1s ease;
     overflow: hidden;
 }
 
-/* Efeito de luz */
+/* Efeito de luz para ícones */
+#github::before,
+#github::after,
+#email-button::before,
+#email-button::after,
+#whats-button::before,
+#whats-button::after,
 #linktree::before,
 #linktree::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(88, 97, 97, 0.082));
     top: 100%;
     left: 0;
     transition: top 0.4s ease, bottom 0.4s ease;
 }
 
+#github::after,
+#email-button::after,
+#whats-button::after,
 #linktree::after {
     top: auto;
     bottom: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.212));
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(255, 255, 255, 0.082));
 }
 
+/* Efeito de luz nos ícones */
+#github::before,
+#email-button:hover::before,
+#whats-button:hover::before,
 #linktree:hover::before {
     top: 0;
 }
 
+#github:hover::after,
+#email-button:hover::after,
+#whats-button:hover::after,
 #linktree:hover::after {
     bottom: 0;
+}
+
+/* Efeito de transformação e mudança de cor ao passar o mouse */
+#github:hover {
+    background-color: #050505;
+    transform: scale(1.05);
+}
+
+#email-button:hover {
+    background-color: #331e47;
+    transform: scale(1.05);
+}
+
+#whats-button:hover {
+    background-color: #175023;
+    transform: scale(1.05);
 }
 
 #linktree:hover {
@@ -148,89 +186,38 @@ p {
     transform: scale(1.05);
 }
 
-.button-container {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+/* Ajuste no tamanho dos ícones */
+#email-button img,
+#whats-button img,
+#github img,
+#linktree img {
+    width: 30px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
 }
 
-#email-button,
-#whats-button {
-    position: relative;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    text-decoration: none;
-}
-
-#email-button {
-    background-color: #5a3a77;
-}
-
-#whats-button {
-    background-color: #2baa5c;
-}
-
-/* Efeito de luz para botões */
-#email-button::before,
-#email-button::after,
-#whats-button::before,
-#whats-button::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(88, 97, 97, 0.3));
-    top: 100%;
-    left: 0;
-    transition: top 0.4s ease, bottom 0.4s ease;
-}
-
-#email-button::after,
-#whats-button::after {
-    top: auto;
-    bottom: 100%;
-    background: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(255, 255, 255, 0.3));
-}
-
-#email-button:hover::before,
-#whats-button:hover::before {
-    top: 0;
-}
-
-#email-button:hover::after,
-#whats-button:hover::after {
-    bottom: 0;
-}
-
-/* Efeito de transformação e mudança de cor ao passar o mouse */
-#email-button:hover {
-    background-color: #4a2a67;
-    transform: scale(1.05);
-}
-
-#whats-button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-}
 
 .emoji {
-    font-size: 30px; /* Aumenta o tamanho do emoji */
+    font-size: 30px;
+    /* Aumenta o tamanho do emoji */
 }
 
 /* Estilos do rodapé */
 footer {
-    position: fixed; /* Fixa no fim da página */
-    bottom: 0; /* Alinha ao fundo */
-    right: 0; /* Alinha à direita */
-    background-color: none; /* Fundo transparente */
-    color: #ffffff; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    text-align: right; /* Texto alinhado à direita */
-    width: 100%; /* Largura total */
+    position: fixed;
+    /* Fixa no fim da página */
+    bottom: 0;
+    /* Alinha ao fundo */
+    right: 0;
+    /* Alinha à direita */
+    background-color: none;
+    /* Fundo transparente */
+    color: #ffffff;
+    /* Cor do texto */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    text-align: right;
+    /* Texto alinhado à direita */
+    width: 100%;
+    /* Largura total */
 }
