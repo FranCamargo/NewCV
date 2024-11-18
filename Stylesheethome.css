@@ -106,7 +106,7 @@ main {
     /* Define o tamanho da fonte como 45 pixels. */
     font-weight: bold;
     /* Aplica o estilo negrito ao texto. */
-    color: rgb(255, 255, 255);
+    color: rgb(73, 83, 78);
     /* Define a cor do texto como branco. */
     filter: drop-shadow(1px 1px 20px rgba(110, 156, 118, 0.685));
     /* Aplica uma sombra azul clara ao texto. */
@@ -125,7 +125,7 @@ main {
     height: 250px;
     display: flex;
     /* Ativa o layout Flexbox. */
-    justify-content: end;
+    justify-content: center;
     /* Centraliza os itens horizontalmente. */
     align-items: center;
     /* Alinha os itens verticalmente. */
@@ -136,14 +136,16 @@ main {
     border: 2px solid rgba(245, 245, 245, 0.281);
     /* Define borda branca semi-transparente. */
     border-radius: 10px;
-    position: sticky;
+    position: absolute;
     /* Fixa o elemento ao rolar a página. */
+    left: -100px;
 }
 p{
     color: rgb(255, 255, 255);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 /* Estilos do rodapé */
