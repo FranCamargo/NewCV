@@ -97,6 +97,10 @@ main {
     /* Centraliza verticalmente os itens do flex */
 }
 
+section{
+    display: flex;
+    width: auto;
+}
 /* Estilos de texto */
 #home {
     
@@ -108,13 +112,15 @@ main {
     /* Aplica o estilo negrito ao texto. */
     color: rgb(73, 83, 78);
     /* Define a cor do texto como branco. */
-    filter: drop-shadow(1px 1px 20px rgba(110, 156, 118, 0.685));
+    filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.685));
     /* Aplica uma sombra azul clara ao texto. */
     opacity: 1;
     /* Define a opacidade do texto como totalmente visível. */
     transition: 0 5s ease;
     /* Define uma transição suave para a opacidade em 5 segundos. */
     text-align: center;
+    position: relative;
+    
     
 }
 
@@ -136,8 +142,9 @@ main {
     border: 2px solid rgba(245, 245, 245, 0.281);
     /* Define borda branca semi-transparente. */
     border-radius: 10px;
-    position: absolute;
+    position: relative;
     /* Fixa o elemento ao rolar a página. */
+    margin-top: 150px;
     left: -100px;
 }
 p{

@@ -26,10 +26,9 @@
     /* Margem vertical de 20px e centraliza horizontalmente. */
     padding: 0 10px;
     /* Espaço interno de 20px nas laterais. */
-    max-width: 40%;
-    width: 70%;
+    max-width: auto;
+    width: 800px;
     overflow: hidden;
-
 }
 
 /* Estilos do menu */
