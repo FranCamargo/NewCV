@@ -26,7 +26,7 @@
     /* Margem vertical de 20px e centraliza horizontalmente. */
     padding: 0 10px;
     /* Espaço interno de 20px nas laterais. */
-    max-width: 40%;
+    max-width: auto;
     width: 70%;
     overflow: hidden;
 
