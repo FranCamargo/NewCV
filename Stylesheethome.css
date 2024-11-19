@@ -101,7 +101,8 @@ section{
     display: flex;
     width: auto;
 }
-/* Estilos de texto */
+
+
 #home {
     
     font-family: 'Times New Roman', Times, serif;
@@ -119,7 +120,6 @@ section{
     transition: 0 5s ease;
     /* Define uma transição suave para a opacidade em 5 segundos. */
     text-align: center;
-    position: relative;
     
     
 }
@@ -142,7 +142,7 @@ section{
     border: 2px solid rgba(245, 245, 245, 0.281);
     /* Define borda branca semi-transparente. */
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     /* Fixa o elemento ao rolar a página. */
     margin-top: 150px;
     left: -100px;
@@ -153,6 +153,7 @@ p{
     font-size: 20px;
     position: relative;
     overflow: hidden;
+
 }
 
 /* Estilos do rodapé */
