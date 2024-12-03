@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="./stylesheetprojetos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Page</title>
-
 </head>
 
 <body>
+    
     <nav class="navbar">
         <ul class="menu">
             <li><a href="./home.html">Home</a></li>
@@ -21,26 +21,107 @@
     </nav>
 
     <main>
-        <div class="background-video">
-            <video autoplay loop muted>
-                <source src="./gifbackground.mp4" type="video/mp4">
-            </video>
-        </div>
-        <!-- Estrutura da seção "Projetos" -->
+        <div class="background"></div>
+
+        <h1>Deslize sobre os painéis para conhecer<br> alguns dos meus projetos!</h1>
+
+        <!-- Seção dos Painéis com Projetos -->
         <section id="projects">
-            <button id="project"></button>
-            <button id="project"></button>
-            <button id="project"></button>
-            <button id="project"></button>
-            <button id="project"></button>
-        
+            <!-- Painel 1 -->
+            <div id="panel1" class="panel" onclick="window.location.href='https://francamargo.github.io/SalemTheCat_animation/SalemTheCat.html';">
+                <img src="./salemthecatimg.jpg" alt="Projeto 1" class="panel-image">
+                
+            </div>
+          
+            <!-- Painel 2 -->
+            <div id="panel2" class="panel" onclick="window.location.href='https://francamargo.github.io/SiteDaHora/sitedahora.html';">
+                <img src="./sitedahoraimg.jpg" alt="Projeto 2" class="panel-image">
+               
+               
+            </div>
+
+            <!-- Painel 3 -->
+            <div id="panel3" class="panel" onclick="window.location.href='https://francamargo.github.io/OneRingChat/OneRing.html';">
+                <img src="./OneRingimg.jpg" alt="Projeto 3" class="panel-image">
+                
+                
+            </div>
+
+            <!-- Painel 4 -->
+            <div id="panel4" class="panel" onclick="window.location.href='https://francamargo.github.io/SpiderChase/SpiderChase.html';">
+                <img src="./spyderchaseimg.jpg" alt="Projeto 4" class="panel-image">
+                
+                
+            </div>
+  
+            <!-- Painel 5 -->
+            <div id="panel5" class="panel" onclick="window.location.href='https://francamargo.github.io/NewCV/newcv.html';">
+                <img src="./newcvimg.jpg" alt="Projeto 5" class="panel-image">
+                
+               
+            </div>
+
         </section>
+        <br>
+
+        <a href="#project-details" class="scroll-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down">
+                <polyline points="7 13 12 18 17 13"></polyline>
+                <polyline points="7 6 12 11 17 6"></polyline>
+            </svg>
+        </a>
+
+        <!-- Seção de navegação com rolagem horizontal dos detalhes do projeto -->
+        <section id="project-details">
+            <div class="project-item" id="project1" onclick="window.location.href='https://francamargo.github.io/SalemTheCat_animation/SalemTheCat.html';"></div>
+                <img src="./salemthecatimg.jpg" alt="Salém The Cat" class="project-image">
+                <div class="project-text">
+                    <div class="texto"><h3>Salém The Cat!</h3>
+                        <p>Uma das primeiras webpages que criei, a arte e a animação foram criadas por mim usando Krita, tem um botão de curtir que armazena as curtidas de cada sessão. 
+                            Além disso aparecem janelas agradecendo as curtidas com mensagens engraçadas.</p>
+                        </div>
+                </div>
+            </div>
+            <div class="project-item" id="project2" onclick="window.location.href='https://francamargo.github.io/SiteDaHora/sitedahora.html';"></div>
+                <img src="./sitedahoraimg.jpg" alt="Site Da Hora" class="project-image">
+                <div class="project-text">
+                    <div class="texto"><h3>Site Da Hora!</h3>
+                    <p>Este site simples, mostra a data e hora atuais de acordo com quem acessa e altera seus atributos automaticamente, de acordo com a hora do dia são alterados imagem do card, background, saudações e texto.</p>
+                </div>
+            </div>
+            </div>
+            <div class="project-item" id="project3" onclick="window.location.href='https://francamargo.github.io/OneRingChat/OneRing.html';"></div>
+                <img src="./OneRingimg.jpg" alt="OneRing Chat" class="project-image">
+                <div class="project-text">
+                    <div id="texto"><h3>OneRing Chat</h3>
+                    <p>Preview da versão beta que está sendo migrada para o framework Angular com conexão entre salas feitas com WebSocket, criei a página inicialmente com puro HTLM5, CSS3 e javascript. Chat anônimo e com cor de texto aleatória ao entrar.</p>
+                </div>
+            </div>
+            </div>
+            <div class="project-item" id="project4" onclick="window.location.href='https://francamargo.github.io/SpiderChase/SpiderChase.html';"></div>
+                <img src="./spyderchaseimg.jpg" alt="Spider Chase" class="project-image">
+                <div class="project-text">
+                    <div class="texto"><h3>Spider Chase</h3>
+                    <p>Adicione aranhas e veja elas perseguirem seu cursor, uma surpresa o espera ao atingir 50 aranhas!</p>
+                </div>
+            </div>
+            </div>
+            <div class="project-item" id="project5" onclick="window.location.href='https://francamargo.github.io/NewCV/newcv.html';"></div>
+                <img src="./newcvimg.jpg" alt="New CV" class="project-image">
+                <div class="project-text">
+                    <div class="texto">  <h3>New CV</h3>
+                    <p>Meu portifólio online, em constante atualização. Maneira prática de demonstrar minhas habilidades e para as pessoas conhecerem um pouco mais sobre mim e manter meu currículo atualizado.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
         <script src="./jquery-3.7.1.min.js"></script>
         <script src="./javascript.js"> </script>
     </main>
 
     <footer>
-        &COPY; 2024 - Site desenvolvido por Franciely Camargo.
+        &COPY; 2024 - (Página em Construção) Site desenvolvido por Franciely Camargo.
     </footer>
 </body>
 
