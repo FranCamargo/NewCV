@@ -74,6 +74,8 @@ h1 {
     gap: 30px;  /* Aumenta a distância entre os painéis */
 }
 
+
+
 .panel {
     position: relative;
     border-radius: 10px;
@@ -102,20 +104,33 @@ h1 {
     object-fit: cover;
 }
 
+*{
+    justify-items: center;
+}
+
 /* Seção de detalhes dos projetos */
 #project-details {
-    display: flex;
-    flex-direction: column;
+    display: grid;               /* Usando CSS Grid */
     gap: 20px;
     margin-top: 500px;
-    text-align: start;
+    text-align: center;
+    justify-content: center;
     max-width: 800px;
+}
+
+#project-details h1 {
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 .project-image {
     width: 500px;
     height: 350px;
     border-radius: 15px;
+}
+p{
+    font-size: 20px;
 }
 
 /* Estilo do rodapé */
@@ -134,7 +149,7 @@ footer {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 20%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -163,4 +178,11 @@ footer {
     60% {
         transform: translate(-50%, -5px);
     }
+}
+fieldset{
+    border-radius: 25px;
+    backdrop-filter: blur(30px);
+    box-sizing: border-box;
+    border-color: purple;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
 }
