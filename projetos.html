@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar">
         <ul class="menu">
             <li><a href="./home.html">Home</a></li>
@@ -21,117 +21,164 @@
     </nav>
 
     <main>
-        <div class="background"></div>
+        <div class="first-block">
+            <div class="background"></div>
 
-        <h1>Deslize sobre os painéis para conhecer<br> alguns dos meus projetos!</h1>
+            <h1>Deslize sobre os painéis para conhecer<br> alguns dos meus projetos!</h1>
 
-        <!-- Seção dos Painéis com Projetos -->
-        <section id="projects">
-            <!-- Painel 1 -->
-            <div id="panel1" class="panel" onclick="window.location.href='https://francamargo.github.io/SalemTheCat_animation/SalemTheCat.html';">
-                <img src="./salemthecatimg.jpg" alt="Projeto 1" class="panel-image">
-                
-            </div>
-          
-            <!-- Painel 2 -->
-            <div id="panel2" class="panel" onclick="window.location.href='https://francamargo.github.io/SiteDaHora/sitedahora.html';">
-                <img src="./sitedahoraimg.jpg" alt="Projeto 2" class="panel-image">
-               
-               
-            </div>
+            <!-- Seção dos Painéis com Projetos -->
+            <section id="projects">
+                <!-- Painel 1 -->
+                <div id="panel1" class="panel"
+                    onclick="window.location.href='https://francamargo.github.io/SalemTheCat_animation/SalemTheCat.html';">
+                    <img src="./salemthecatimg.jpg" alt="Projeto 1" class="panel-image">
 
-            <!-- Painel 3 -->
-            <div id="panel3" class="panel" onclick="window.location.href='https://francamargo.github.io/OneRingChat/OneRing.html';">
-                <img src="./OneRingimg.jpg" alt="Projeto 3" class="panel-image">
-                
-                
-            </div>
-
-            <!-- Painel 4 -->
-            <div id="panel4" class="panel" onclick="window.location.href='https://francamargo.github.io/SpiderChase/SpiderChase.html';">
-                <img src="./spyderchaseimg.jpg" alt="Projeto 4" class="panel-image">
-                
-                
-            </div>
-  
-            <!-- Painel 5 -->
-            <div id="panel5" class="panel" onclick="window.location.href='https://francamargo.github.io/NewCV/newcv.html';">
-                <img src="./newcvimg.jpg" alt="Projeto 5" class="panel-image">
-                
-               
-            </div>
-
-        </section>
-        <br>
-        <h1>Clique sobre a imagem do projeto para visitar o site ou leia abaixo sobre eles.</h1>
-        <br>
-
-        <a href="#project-details" class="scroll-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down">
-                <polyline points="7 13 12 18 17 13"></polyline>
-                <polyline points="7 6 12 11 17 6"></polyline>
-            </svg>
-        </a>
-
-        <!-- Seção de navegação com rolagem horizontal dos detalhes do projeto -->
-
-        <section id="project-details">
-            <fieldset>
-                <legend><h2>New CV</h2></legend>
-            <div class="project-item" id="project5" onclick="window.location.href='https://francamargo.github.io/NewCV/newcv.html';"></div>
-            <img src="./newcvimg.jpg" alt="New CV" class="project-image">
-            <div class="project-text">
-                <div class="texto"> 
-                <p>Meu portifólio online, em constante atualização.<br>
-                Maneira prática de demonstrar minhas habilidades e para as pessoas conhecerem<br> um pouco mais
-                sobre mim e manter meu currículo atualizado.<br> Neste momento estou trabalhando na responsividade dele.</p>
-            </div>
-            </div>
-        </div>
-    </fieldset>
-        <div class="project-item" id="project3" onclick="window.location.href='https://francamargo.github.io/OneRingChat/OneRing.html';"></div>
-        <img src="./OneRingimg.jpg" alt="OneRing Chat" class="project-image">
-        <div class="project-text">
-            <div id="texto"><h2>OneRing Chat</h2>
-            <p>Este preview da versão beta de um chat anônimo que está sendo migrada para o framework<br> 
-            Angular com conexão entre salas feitas com WebSocket. <br>
-            Criei a página inicialmente com puro HTLM5, CSS3 e javascript. Ele gera nome de usuário e <br>
-            cor de texto aleatória ao entrar. É possível enviar emojis, após o primeiro texto ser enviado, <br>
-        Assim como a funcionalidade de enviar o texto para a tela só é liberada após se conectar.</p>
-        </div>
-    </div>
-    </div>
-            <div class="project-item" id="project2" onclick="window.location.href='https://francamargo.github.io/SiteDaHora/sitedahora.html';"></div>
-                <img src="./sitedahoraimg.jpg" alt="Site Da Hora" class="project-image">
-                <div class="project-text">
-                    <div class="texto"><h2>Site Da Hora!</h2>
-                    <p>Este site simples, mostra a data e hora atuais de acordo com quem acessa e altera seus atributos <br>
-                        automaticamente, de acordo com a hora do dia são alterados imagem do card, background, saudações e texto.</p>
                 </div>
-            </div>
-            </div>
-            <div class="project-item" id="project4" onclick="window.location.href='https://francamargo.github.io/SpiderChase/SpiderChase.html';"></div>
-                <img src="./spyderchaseimg.jpg" alt="Spider Chase" class="project-image">
-                <div class="project-text">
-                    <div class="texto"><h2>Spider Chase</h2>
-                    <p>Animação interativa em canvas onde aranhas brancas perseguem o cursor do mouse com fluidez.<br>
-                    Esse simples projeto usa HTML5, CSS e JavaScript puro e integrado, demonstrando desenho vetorial e
-                    manipulação de eventos. <br>
-                    Há uma surpresinha ao chegar em 50 aranhas :D</p>
+
+                <!-- Painel 2 -->
+                <div id="panel2" class="panel"
+                    onclick="window.location.href='https://francamargo.github.io/SiteDaHora/sitedahora.html';">
+                    <img src="./sitedahoraimg.jpg" alt="Projeto 2" class="panel-image">
+
+
                 </div>
-            </div>
-            </div>
-            <div class="project-item" id="project1" onclick="window.location.href='https://francamargo.github.io/SalemTheCat_animation/SalemTheCat.html';"></div>
-                <img src="./salemthecatimg.jpg" alt="Salém The Cat" class="project-image">
-                <div class="project-text">
-                    <div class="texto"><h2>Salém The Cat!</h2>
-                        <p>Uma das primeiras webpages que criei, a arte e a animação foram criadas por mim usando Krita <br>
-                            tem um botão de curtir que armazena as curtidas de cada sessão. <br>
-                            Além disso aparecem janelas agradecendo as curtidas com mensagens engraçadas.</p>
+
+                <!-- Painel 3 -->
+                <div id="panel3" class="panel"
+                    onclick="window.location.href='https://francamargo.github.io/OneRingChat/OneRing.html';">
+                    <img src="./OneRingimg.jpg" alt="Projeto 3" class="panel-image">
+
+
+                </div>
+
+                <!-- Painel 4 -->
+                <div id="panel4" class="panel"
+                    onclick="window.location.href='https://francamargo.github.io/SpiderChase/SpiderChase.html';">
+                    <img src="./spyderchaseimg.jpg" alt="Projeto 4" class="panel-image">
+
+
+                </div>
+
+                <!-- Painel 5 -->
+                <div id="panel5" class="panel"
+                    onclick="window.location.href='https://francamargo.github.io/NewCV/newcv.html';">
+                    <img src="./newcvimg.jpg" alt="Projeto 5" class="panel-image">
+
+
+                </div>
+
+            </section>
+            <br>
+            <h1>Clique sobre a imagem do projeto para visitar o site ou leia abaixo sobre eles.</h1>
+            <a href="#project-details" class="scroll-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none"
+                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevrons-down">
+                    <polyline points="7 13 12 18 17 13"></polyline>
+                    <polyline points="7 6 12 11 17 6"></polyline>
+                </svg>
+            </a>
+        </div>
+
+        <div class="second-block">
+            <!-- Seção de navegação com rolagem horizontal dos detalhes do projeto -->
+            <section id="project-details">
+                <fieldset>
+                    <legend>
+                        <h2>New CV</h2>
+                    </legend>
+                    <div class="project-item" id="project5"
+                        onclick="window.location.href='https://francamargo.github.io/NewCV/newcv.html';"></div>
+                    <img src="./newcvimg.jpg" alt="New CV" class="project-image">
+                    <div class="project-text">
+                        <div class="texto">
+                            <p>Meu portifólio online, em constante atualização.<br>
+                                Maneira prática de demonstrar minhas habilidades e para as pessoas conhecerem um
+                                pouco mais sobre mim e manter meu currículo atualizado.<br> 
+                                Neste momento estou trabalhando na responsividade dele.</p>
                         </div>
+                    </div>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h2>OneRing Chat</h2>
+            </legend>
+            <div class="project-item" id="project3"
+                onclick="window.location.href='https://francamargo.github.io/OneRing_frontend/onering.html';"></div>
+            <img src="./OneRingimg.jpg" alt="OneRing Chat" class="project-image">
+            <div class="project-text">
+                <div id="texto">
+
+                    <p>Este preview da versão beta de um chat anônimo que está sendo migrada para o framework<br>
+                        Angular com conexão entre salas feitas com WebSocket. <br>
+                        Criei a página inicialmente com puro HTLM5, CSS3 e javascript. Ele gera nome de usuário e
+                        <br>
+                        cor de texto aleatória ao entrar. É possível enviar emojis, após o primeiro texto ser
+                        enviado, <br>
+                        Assim como a funcionalidade de enviar o texto para a tela só é liberada após se conectar.
+                    </p>
                 </div>
             </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h2>Site Da Hora!</h2>
+            </legend>
+            <div class="project-item" id="project2"
+                onclick="window.location.href='https://francamargo.github.io/SiteDaHora/sitedahora.html';"></div>
+            <img src="./sitedahoraimg.jpg" alt="Site Da Hora" class="project-image">
+            <div class="project-text">
+                <div class="texto">
+
+                    <p>Este site simples, mostra a data e hora atuais de acordo com quem acessa e altera <br> 
+                        seus atributos automaticamente, de acordo com a hora do dia são alterados imagem do <br>
+                        card, background, saudações e texto.</p>
+                </div>
+            </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h2>Spider Chase</h2>
+            </legend>
+            <div class="project-item" id="project4"
+                onclick="window.location.href='https://francamargo.github.io/Spider_Chase_Animation/;"></div>
+            <img src="./spyderchaseimg.jpg" alt="Spider Chase" class="project-image">
+            <div class="project-text">
+                <div class="texto">
+
+                    <p>Animação interativa em canvas onde aranhas brancas perseguem o cursor do mouse com <br>
+                        fluidez. Esse simples projeto usa HTML5, CSS e JavaScript puro e integrado,<br> demonstrando desenho
+                        vetorial e manipulação de eventos. <br>
+                        Há uma surpresinha ao chegar em 50 aranhas :D</p>
+                </div>
+            </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h2>Salém The Cat!</h2>
+            </legend>
+            <div class="project-item" id="project1"
+                onclick="window.location.href='https://francamargo.github.io/SalemTheCat_animation/SalemTheCat.html';">
+            </div>
+            <img src="./salemthecatimg.jpg" alt="Salém The Cat" class="project-image">
+            <div class="project-text">
+                <div class="texto">
+
+                    <p>Uma das primeiras webpages que criei, a arte e a animação foram criadas por mim <br>
+                        usando Krita. Tem um botão de curtir que armazena as curtidas de cada sessão e além <br>
+                        disso aparecem janelas agradecendo as curtidas com mensagens engraçadas.
+                    </p>
+                </div>
+            </div>
+            </div>
+        </fieldset>
         </section>
+
+        </div>
 
         <script src="./jquery-3.7.1.min.js"></script>
         <script src="./javascript.js"> </script>

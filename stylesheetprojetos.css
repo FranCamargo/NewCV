@@ -5,7 +5,7 @@
     align-items: center;
     backdrop-filter: blur(30px);
     box-sizing: border-box;
-    box-shadow: 0px 0px 30px rgb(158, 152, 152);
+    box-shadow: 0px 0px 30px rgb(20, 20, 20);
     border: 2px solid rgba(29, 27, 27, 0.205);
     position: relative;
     top: 0;
@@ -95,6 +95,7 @@ h1 {
     transform: scale(1.5); /* Aumenta o painel */
     width: 400px;
     height: 300px;
+    box-shadow: 0px 0px 30px rgb(17, 17, 17);
 }
 
 
@@ -133,16 +134,6 @@ p{
     font-size: 20px;
 }
 
-/* Estilo do rodapé */
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: right;
-    width: 100%;
-}
 
 .scroll-arrow {
     display: flex;
@@ -179,10 +170,42 @@ footer {
         transform: translate(-50%, -5px);
     }
 }
+
 fieldset{
     border-radius: 25px;
-    backdrop-filter: blur(30px);
-    box-sizing: border-box;
-    border-color: purple;
-    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    backdrop-filter: blur(20px);
+    border: 3px;
+    border-color: rgb(20, 1, 20);
+    text-align: center;
+    
+}
+
+fieldset:hover{
+    box-shadow: 0px 0px 30px rgb(17, 17, 17);
+}
+legend{
+    margin-top: 80px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.first-block{
+    size: 100vh;
+    font-size: 20px;
+
+}
+.second-block{
+    justify-content: center;
+    size: 300vh;
+}
+
+/* Estilo do rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: right;
+    width: 100%;
 }
