@@ -111,9 +111,9 @@ section{
     /* Define o tamanho da fonte como 45 pixels. */
     font-weight: bold;
     /* Aplica o estilo negrito ao texto. */
-    color: rgb(73, 83, 78);
+    color: rgb(121, 145, 133);
     /* Define a cor do texto como branco. */
-    filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.685));
+    filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.385));
     /* Aplica uma sombra azul clara ao texto. */
     opacity: 1;
     /* Define a opacidade do texto como totalmente visível. */
@@ -126,7 +126,7 @@ section{
 
 
 .box {
-    background-color: rgba(71, 168, 123, 0.312);
+    background-color: rgba(17, 24, 21, 0.312);
     width: 500px;
     height: 250px;
     display: flex;
@@ -137,7 +137,7 @@ section{
     /* Alinha os itens verticalmente. */
     backdrop-filter: blur(30px);
     /* Aplica desfoque ao fundo. */
-    box-shadow: 0px 0px 30px rgb(218, 216, 216);
+    box-shadow: 0px 0px 30px rgba(218, 216, 216, 0.177);
     /* Adiciona sombra ao redor. */
     border: 2px solid rgba(245, 245, 245, 0.281);
     /* Define borda branca semi-transparente. */
@@ -156,14 +156,24 @@ p{
 
 }
 
-/* Estilos do rodapé */
 footer {
-    position: fixed; /* Fixa no fim da página */
-    bottom: 0; /* Alinha ao fundo */
-    right: 0; /* Alinha à direita */
-    background-color: none; /* Fundo transparente */
-    color: #4d4b4b; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    text-align: right; /* Texto alinhado à direita */
-    width: 100%; /* Largura total */
+
+    position: fixed;
+    /* Fixa o footer na parte inferior da página */
+    bottom: 0;
+    /* Posiciona o footer na parte inferior */
+    right: 0;
+    /* Alinha o footer à direita */
+    background-color: none;
+    /* Cor de fundo do footer */
+    color: #a19898c5;
+    /* Cor do texto */
+    padding: 10px 20px;
+    /* Espaçamento interno do footer */
+    text-align: right;
+    /* Alinha o texto à direita */
+    width: 100%;
+    /* Define a largura do footer */
+
+
 }

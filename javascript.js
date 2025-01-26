@@ -1,4 +1,5 @@
 $(document).ready(function () {
+ 
   // Abre a página com botões filhos escondidos
   $(".child-buttons").hide();
 
@@ -36,6 +37,12 @@ function setActivePanel(index) {
       }
     });
   }, 300); // O tempo deve corresponder ao tempo de transição CSS
+
+  // Atualiza o ano automaticamente no elemento com ID 'currentYear'
+  const yearElement = document.getElementById('currentYear');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 }
 
 function mostrarPainel(numeroDoPainel) {
@@ -53,4 +60,3 @@ function mostrarPainel(numeroDoPainel) {
     }
   });
 }
-

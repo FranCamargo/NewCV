@@ -127,7 +127,7 @@ section {
 }
 
 .box {
-    background: rgba(108, 170, 139, 0.747);
+    background:  rgba(32, 44, 39, 0.301);
     /* Fundo branco com transparência */
     backdrop-filter: blur(10px);
     /* Aplica o efeito blur ao fundo */
@@ -169,7 +169,7 @@ footer {
     /* Alinha o footer à direita */
     background-color: none;
     /* Cor de fundo do footer */
-    color: #6b6262;
+    color: #a19898c5;
     /* Cor do texto */
     padding: 10px 20px;
     /* Espaçamento interno do footer */

@@ -95,9 +95,9 @@ p {
     justify-content: center;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.493);
+    background-color: rgba(58, 57, 57, 0.514);
     border: 1px solid #cecece81;
-    box-shadow: 0 4px 8px rgba(111, 129, 104, 0.438);
+    box-shadow: 0 4px 8px rgba(109, 110, 108, 0.438);
     padding: 20px;
     width: 300px;
     max-width: 100%;
@@ -200,22 +200,24 @@ p {
     /* Aumenta o tamanho do emoji */
 }
 
-/* Estilos do rodapé */
 footer {
+
     position: fixed;
-    /* Fixa no fim da página */
+    /* Fixa o footer na parte inferior da página */
     bottom: 0;
-    /* Alinha ao fundo */
+    /* Posiciona o footer na parte inferior */
     right: 0;
-    /* Alinha à direita */
+    /* Alinha o footer à direita */
     background-color: none;
-    /* Fundo transparente */
-    color: #ffffff;
+    /* Cor de fundo do footer */
+    color: #a19898c5;
     /* Cor do texto */
     padding: 10px 20px;
-    /* Espaçamento interno */
+    /* Espaçamento interno do footer */
     text-align: right;
-    /* Texto alinhado à direita */
+    /* Alinha o texto à direita */
     width: 100%;
-    /* Largura total */
+    /* Define a largura do footer */
+
+
 }

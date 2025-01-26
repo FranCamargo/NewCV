@@ -1,20 +1,34 @@
 /* Estilos da barra de navegação */
 .navbar {
     display: flex;
+    /* Ativa o layout Flexbox. */
     justify-content: center;
+    /* Centraliza os itens horizontalmente. */
     align-items: center;
+    /* Alinha os itens verticalmente. */
     backdrop-filter: blur(30px);
+    /* Aplica desfoque ao fundo. */
     box-sizing: border-box;
-    box-shadow: 0px 0px 30px rgb(20, 20, 20);
+    box-shadow: 0px 0px 30px rgb(158, 152, 152);
+    /* Adiciona sombra ao redor. */
     border: 2px solid rgba(29, 27, 27, 0.205);
+    /* Define borda branca semi-transparente. */
     position: relative;
+    /* Fixa o elemento ao rolar a página. */
     top: 0;
+    /* Coloca o elemento no topo. */
     border-radius: 30px;
+    /* Arredonda os cantos. */
     height: 60px;
+    /* Define altura fixa. */
     margin: 20px auto;
+    /* Margem vertical de 20px e centraliza horizontalmente. */
     padding: 0 10px;
+    /* Espaço interno de 20px nas laterais. */
+    max-width: auto;
     width: 800px;
     overflow: hidden;
+
 }
 
 /* Estilos do menu */
@@ -39,9 +53,9 @@
     transition: color 0.3s;
 }
 
-/* Cor ao passar o mouse */
 .menu a:hover {
-    color: #69bfe7;
+    color: #065a30;
+    /* Muda a cor do texto ao passar o mouse. */
 }
 body{
     color: white;
@@ -65,6 +79,7 @@ h1 {
     margin-top: 100px;
     text-align: center;
     color: rgb(255, 255, 255);
+    font-size: 30px;
 }
 
 #projects {
@@ -199,13 +214,24 @@ legend{
     size: 300vh;
 }
 
-/* Estilo do rodapé */
 footer {
+
     position: fixed;
+    /* Fixa o footer na parte inferior da página */
     bottom: 0;
+    /* Posiciona o footer na parte inferior */
     right: 0;
-    color: #ffffff;
+    /* Alinha o footer à direita */
+    background-color: none;
+    /* Cor de fundo do footer */
+    color: #a19898c5;
+    /* Cor do texto */
     padding: 10px 20px;
+    /* Espaçamento interno do footer */
     text-align: right;
+    /* Alinha o texto à direita */
     width: 100%;
+    /* Define a largura do footer */
+
+
 }
