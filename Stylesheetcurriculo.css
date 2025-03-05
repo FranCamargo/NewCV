@@ -103,7 +103,7 @@
     width: 100%; /* Largura total do container */
     height: 100%; /* Altura total do container */
     padding: 20px; /* Espaço interno */
-    box-shadow: 0 4px 20px rgba(166, 168, 168, 0.542);
+    box-shadow: 0 4px 20px rgba(166, 168, 168, 0.062);
     /* Sombra ao redor da caixa */
     border: 1px solid rgba(255, 255, 255, 0.119);
     line-height: 1.5; /* Espaço entre linhas */
@@ -115,7 +115,7 @@
     z-index: 0; /* Painéis inativos atrás */
     opacity: 0; /* Painel invisível inicialmente */
     transform: translateX(100px) scale(0.1); /* Inicialmente fora de vista */
-    overflow-y: scroll; /* Ativa rolagem vertical */
+    overflow: auto;
     max-width: 600px; /* Largura fixa */
     max-height: 600px; 
 }
